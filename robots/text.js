@@ -13,8 +13,10 @@ const nlu = new NaturalLanguageUnderstandingV1({
 
 const state = require('./state')
 
+
 async function robot() {
-    const content = state.load()
+
+    content = state.load()
 
     await fetchContentFromWikipedia(content)
     sanitizeContent(content)
@@ -24,6 +26,8 @@ async function robot() {
 
     state.save(content)
 
+    
+  
 
     async function fetchContentFromWikipedia(content) {
         const algorithmiaAuthenticated = algorithmia(algorithmiaKey)

@@ -9,12 +9,14 @@ function robot(){
 
     content.language = askAndReturnLanguageOfSearch()
     
-    if(content.language === "pt") {
+    if(content.language == false) {
         content.searchTerm  = askAndReturnSearchTermInPortuguese()
         content.prefix = askAndReturnPrefixInPortuguese()
+        
     }else{
     content.searchTerm  = askAndReturnSearchTermInEnglish()
-    content.prefix = askAndReturnPrefixInEnglish()}
+    content.prefix = askAndReturnPrefixInEnglish()
+    }
 
     state.save(content)
 
@@ -46,8 +48,11 @@ function robot(){
         selectedLanguageIndex = readline.keyInSelect(language,'Choose one language:(Escolha um idioma) ')
         if(selectedLanguageIndex === 0){
             return 'pt'
+        }else{
+            return 'en'
+
         }
-        return 'en'
+
     }
 }
 
