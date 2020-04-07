@@ -9,7 +9,7 @@ function robot(){
 
     content.language = askAndReturnLanguageOfSearch()
     
-    if(content.language == false) {
+    if(content.language == 'pt') {
         content.searchTerm  = askAndReturnSearchTermInPortuguese()
         content.prefix = askAndReturnPrefixInPortuguese()
         
@@ -29,14 +29,14 @@ function robot(){
     }
 
     function askAndReturnPrefixInEnglish() {
-        const prefix = ['Who is? ', 'What is? ', 'The history of...']
+        const prefix = ['Who is? ', 'What is? ', 'The history of']
         const selectedPrefixIndex = readline.keyInSelect(prefix, 'Choose one option: ')
         const selectedPrefixText = prefix[selectedPrefixIndex]
 
         return selectedPrefixText
     }
     function askAndReturnPrefixInPortuguese() {
-        const prefix = ['Quem e?', 'O que e', 'A historia de...']
+        const prefix = ['Quem e?', 'O que e', 'A historia de']
         const selectedPrefixIndex = readline.keyInSelect(prefix, 'Escolha uma opcao: ')
         const selectedPrefixText = prefix[selectedPrefixIndex]
 
