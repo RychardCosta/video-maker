@@ -5,7 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "algorithmia": "^0.3.10",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "gm": "^1.23.1",
     "googleapis": "^48.0.0",
